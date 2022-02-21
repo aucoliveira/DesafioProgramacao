@@ -33,7 +33,8 @@ public class QuestaoTres {
 					lista.add(novaPalavra);
 					posicaoAnagrama[l] = i;
 					posicaoAnagrama[l+1]= j;
-
+					posicao[l][l+1] = {{posicaoAnagrama[l], posicaoAnagrama[l+1]}};
+					l++;
 				}
 
 				if (novaPalavra.length()+1 < palavra.length()) {
@@ -44,6 +45,8 @@ public class QuestaoTres {
 						posicaoAnagrama[l] = i;
 						posicaoAnagrama[l+1]= j;
 						posicaoAnagrama[l+2]= j+1;
+						posicao[l][l+1] = {{posicaoAnagrama[l], posicaoAnagrama[l+1]}};
+						l++;
 					}
 				}
 			}
